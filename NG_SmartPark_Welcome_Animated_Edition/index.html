@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071123">
+  <meta name="description" content="NG SmartPark — a vibrant Python-powered smart parking project designed and built by Nithin Gowda.">
+  <link rel="icon" type="image/svg+xml" href="/ng-logo.svg">
+  <title>NG SmartPark | Built by Nithin Gowda</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/brand.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard" aria-label="NG SmartPark home">
+        <span class="brand-mark"><img src="/ng-logo.svg" alt="NG SmartPark custom logo"></span>
+        <span class="brand-copy"><strong><span class="brand-ng">NG</span> <span>SmartPark</span></strong><small>BY NITHIN GOWDA · CSE</small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-view="dashboard"><span class="nav-icon">⌂</span>Dashboard</button>
+        <button class="nav-link" data-view="park"><span class="nav-icon">🚘</span>Park Vehicle</button>
+        <button class="nav-link" data-view="slots"><span class="nav-icon">▦</span>Parking Slots</button>
+        <button class="nav-link" data-view="history"><span class="nav-icon">◷</span>Parking History</button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-note signature-note">
+        <div class="tiny-sun">✦</div>
+        <strong>Think bold.<br>Park smarter.</strong>
+        <p>Designed and built with curiosity by Nithin Gowda.</p>
+        <span class="author-pill">FIRST-YEAR CSE PROJECT</span>
+      </div>
+      <div class="side-foot"><span class="online-dot"></span> Local demo server <span class="version">NG · 2.0</span></div>
+    </aside>
+
+    <main class="main-area" id="dashboard">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">WELCOME TO MY SMART PARKING PROJECT <span class="eyebrow-line"></span></p>
+          <h1>Welcome to <span class="name-gradient">NG SmartPark</span> <span class="wave">✦</span></h1>
+          <p class="top-subtitle">Created by Nithin Gowda · First-Year CSE. A little code, a smarter city, a smoother everyday.</p>
+        </div>
+        <div class="top-actions">
+          <button class="showcase-toggle" id="showcase-toggle" type="button" aria-pressed="false" title="Turn on extra glow and animated showcase effects"><span class="toggle-spark">✧</span><span class="toggle-copy">SHOWCASE MODE</span><span class="toggle-led"></span></button>
+          <div class="date-chip"><span>◷</span><div><b id="weather-label">SMARTPARK LIVE</b><small id="date-label">Loading date…</small></div></div>
+          <div class="profile"><span class="avatar">NG</span><div><b>Nithin Gowda</b><small>First-Year CSE</small></div><span class="chevron">⌄</span></div>
+        </div>
+      </header>
+
+      <section class="hero reveal">
+        <div class="hero-copy">
+          <span class="hero-pill"><span class="online-dot"></span> STUDENT-BUILT PROJECT <span class="hero-pill-divider">/</span> PYTHON POWERED</span>
+          <h2>Built by Nithin Gowda.<br><em>Made for smarter parking.</em></h2>
+          <p>My Smart Parking Management System brings automatic slot allocation, vehicle check-in and checkout, fee calculation and saved parking history into one colourful dashboard.</p>
+          <button class="hero-button" data-jump="park">Launch your parking journey <span>↗</span></button>
+          <div class="hero-tech-row"><span>✦ AUTO SLOT</span><span>◉ LIVE STATUS</span><span>₹ SMART FEES</span></div>
+        </div>
+        <div class="hero-sticker sticker-one"><span>✓</span> Auto slot assignment</div>
+        <div class="hero-sticker sticker-two"><span>₹</span> Simple, clear fees</div>
+        <div class="hero-art"><img src="/parking-scene.png" alt="Illustration of a car entering an everyday city parking area"></div>
+        <div class="hero-bottomline"><span>⚡</span> My idea · My code · Built by Nithin Gowda</div>
+      </section>
+
+      <section class="live-lot-panel panel reveal" id="live-lot-panel" aria-label="Animated smart parking simulation">
+        <div class="live-lot-heading">
+          <div class="live-lot-title">
+            <p class="sim-eyebrow"><span class="sim-eyebrow-dot"></span> NG SMARTPARK · LIVE SIMULATION</p>
+            <h2>Watch the parking lot <span>come alive.</span></h2>
+            <p>When a vehicle checks in, it drives into its assigned bay. At checkout, it moves out and the sensor turns green again.</p>
+          </div>
+          <div class="sim-heading-stats">
+            <div class="sim-mini-stat"><span class="sim-mini-symbol">🚘</span><div><small>Vehicles inside</small><strong id="sim-active-count">0</strong></div></div>
+            <div class="sim-mini-stat"><span class="sim-mini-symbol free">⌑</span><div><small>Free bays</small><strong id="sim-free-count">10</strong></div></div>
+          </div>
+        </div>
+        <div class="sim-world" id="sim-world">
+          <div class="sim-world-stars" aria-hidden="true"></div>
+          <div class="sim-skyline" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <svg class="sim-network-lines" viewBox="0 0 1000 380" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M75 72 C180 20 245 42 345 90 S520 66 585 78 S790 25 930 78"/>
+            <path d="M78 72 C145 132 236 128 302 160 S430 190 505 145 S720 130 930 78"/>
+            <path d="M78 72 C145 210 260 245 380 248 S690 245 930 78"/>
+            <circle cx="75" cy="72" r="5"/><circle cx="345" cy="90" r="4"/><circle cx="585" cy="78" r="4"/><circle cx="930" cy="78" r="5"/>
+          </svg>
+          <div class="sim-cloud-node" aria-label="Connected parking sensor network"><span class="sim-cloud-icon">☁</span><span class="sim-wifi">)))</span><small>IoT SENSOR LINK</small></div>
+          <div class="sim-lane sim-lane-top"><span>SMART PARKING ZONE A</span><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="sim-lot-surface">
+            <div class="sim-bays-grid" id="sim-bays-grid" aria-live="polite"></div>
+          </div>
+          <div class="sim-road sim-road-bottom"><span class="sim-road-arrow">⇢</span><span>ONE-WAY PARKING LANE</span><span class="sim-road-dashes"></span><span class="sim-road-arrow">⇢</span></div>
+          <div class="sim-gate sim-entry" id="sim-entry"><span class="sim-gate-icon">↘</span><span class="sim-gate-light"></span><strong>ENTRY</strong><small>Scan & assign</small><i class="sim-barrier"></i></div>
+          <div class="sim-gate sim-exit" id="sim-exit"><span class="sim-gate-icon">↗</span><span class="sim-gate-light"></span><strong>EXIT</strong><small>Pay & release</small><i class="sim-barrier"></i></div>
+          <div id="sim-motion-layer" class="sim-motion-layer" aria-hidden="true"></div>
+          <div class="sim-event-chip"><span class="sim-event-live"></span><div><strong id="sim-event-title">Sensor network online</strong><small id="sim-event-copy">10 bays connected · Ready for the next vehicle</small></div><span class="sim-event-wave">⌁</span></div>
+          <div class="sim-corner-brand"><img src="/ng-logo.svg" alt=""><span>NG SMARTPARK</span></div>
+        </div>
+        <div class="sim-legend-row">
+          <div class="sim-legend-items"><span><i class="sim-legend-dot available"></i> Green sensor · Available</span><span><i class="sim-legend-dot occupied"></i> Red sensor · Occupied</span><span><i class="sim-legend-dot motion"></i> Animated route · Vehicle moving</span></div>
+          <button class="sim-demo-button" id="sim-demo-button" type="button"><span>▶</span> Play movement demo</button>
+        </div>
+        <p class="sim-demo-note">Demo mode animates a sample car without adding a fake transaction to your saved parking records.</p>
+      </section>
+
+      <section class="stat-grid" aria-label="Parking overview">
+        <article class="stat-card stat-green reveal">
+          <div class="stat-top"><span class="stat-icon">🚘</span><span class="stat-trend">● Live</span></div>
+          <p class="stat-label">Vehicles parked</p><div class="stat-value" id="parked-count">0</div>
+          <div class="stat-bottom"><span class="mini-bar"><i style="width:40%"></i></span><small>Currently inside</small></div>
+        </article>
+        <article class="stat-card stat-blue reveal">
+          <div class="stat-top"><span class="stat-icon">🅿️</span><span class="stat-trend">Ready</span></div>
+          <p class="stat-label">Slots available</p><div class="stat-value"><span id="available-count">10</span><small> / <span id="total-slots">10</span></small></div>
+          <div class="stat-bottom"><span class="mini-bar"><i id="availability-bar" style="width:100%"></i></span><small>Spaces ready to use</small></div>
+        </article>
+        <article class="stat-card stat-orange reveal">
+          <div class="stat-top"><span class="stat-icon">₹</span><span class="stat-trend">Collected</span></div>
+          <p class="stat-label">Fees collected</p><div class="stat-value" id="fees-collected">₹0.00</div>
+          <div class="stat-bottom"><span class="fee-spark">↗</span><small>Completed checkouts</small></div>
+        </article>
+        <article class="stat-card stat-purple reveal">
+          <div class="stat-top"><span class="stat-icon">✦</span><span class="stat-trend">Today</span></div>
+          <p class="stat-label">Today's arrivals</p><div class="stat-value" id="entries-today">0</div>
+          <div class="stat-bottom"><span class="pulse-wave">⌁</span><small>Entry records today</small></div>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <div class="left-column">
+          <section class="panel action-panel reveal" id="park-section">
+            <div class="panel-heading">
+              <div class="heading-icon icon-blue">↗</div><div><h2>Vehicle actions</h2><p>Register a new arrival or complete a checkout.</p></div>
+              <span class="heading-decoration">✳</span>
+            </div>
+            <form id="park-form" class="action-form">
+              <div class="field-group"><label for="vehicle-number">Vehicle number</label><div class="input-wrap"><span>🚗</span><input id="vehicle-number" name="vehicle_number" maxlength="20" placeholder="e.g. KA01AB1234" autocomplete="off" required></div></div>
+              <div class="field-group"><label for="vehicle-type">Vehicle type</label><div class="select-wrap"><span>🚙</span><select id="vehicle-type" name="vehicle_type"><option>Car</option><option>Bike</option><option>Auto</option><option>Van</option><option>Other</option></select><span class="select-arrow">⌄</span></div></div>
+              <button class="btn btn-green park-btn" type="submit"><span class="btn-symbol">＋</span> Park vehicle</button>
+            </form>
+            <form id="checkout-form" class="checkout-form">
+              <div class="field-group"><label for="checkout-number">Check-out number</label><div class="input-wrap"><span>↗</span><input id="checkout-number" name="vehicle_number" maxlength="20" placeholder="Enter parked vehicle number" autocomplete="off" required></div></div>
+              <button class="btn btn-orange" type="submit"><span>▣</span> Check out & calculate fee</button>
+              <button class="btn btn-soft" id="refresh-button" type="button"><span>⟳</span> Refresh</button>
+            </form>
+            <div class="form-hint"><span>💡</span> Demo rate: <strong id="hourly-rate">₹20</strong> per started hour · Minimum fee ₹20</div>
+          </section>
+
+          <section class="panel parking-panel reveal" id="parking-content">
+            <div class="tab-row" role="tablist" aria-label="Parking views">
+              <button class="tab-button active" role="tab" aria-selected="true" data-tab="slots"><span>▦</span> Parking slots</button>
+              <button class="tab-button" role="tab" aria-selected="false" data-tab="current"><span>🚘</span> Current parking</button>
+              <button class="tab-button" role="tab" aria-selected="false" data-tab="history"><span>◷</span> History</button>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab-slots" role="tabpanel">
+                <div class="section-subhead"><div><h3>Your parking lot</h3><p>Tap a slot card to see its current status.</p></div><div class="legend"><span><i class="legend-green"></i> Available</span><span><i class="legend-red"></i> Occupied</span></div></div>
+                <div class="slot-grid" id="slot-grid" aria-live="polite"></div>
+              </div>
+              <div class="tab-pane" id="tab-current" role="tabpanel" hidden>
+                <div class="section-subhead"><div><h3>Vehicles on site</h3><p>Every vehicle currently assigned a parking space.</p></div><span class="count-chip" id="current-count-chip">0 vehicles</span></div>
+                <div class="table-wrap"><table><thead><tr><th>Vehicle</th><th>Type</th><th>Slot</th><th>Entry time</th><th>Status</th></tr></thead><tbody id="current-table"><tr><td colspan="5" class="empty-cell">No vehicles parked right now.</td></tr></tbody></table></div>
+              </div>
+              <div class="tab-pane" id="tab-history" role="tabpanel" hidden>
+                <div class="section-subhead"><div><h3>Parking history</h3><p>Recently parked and checked-out vehicles.</p></div><span class="count-chip">Saved records</span></div>
+                <div class="table-wrap"><table><thead><tr><th>Vehicle</th><th>Type</th><th>Slot</th><th>Entry</th><th>Exit</th><th>Fee</th><th>Status</th></tr></thead><tbody id="history-table"><tr><td colspan="7" class="empty-cell">No records yet. Park a demo vehicle to begin.</td></tr></tbody></table></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="right-column">
+          <section class="scene-card reveal">
+            <div class="scene-image"><img src="/parking-scene.png" alt="Colourful city parking scene with a car and parking sign"><span class="image-glow"></span><span class="scene-floating">🅿️</span><span class="scene-orbit orbit-a">✦</span><span class="scene-orbit orbit-b">NG</span></div>
+            <div class="scene-copy"><span class="tiny-label">THE NG SMARTPARK IDEA</span><h3>Less parking stress. More city progress.</h3><p>A student-built idea using simple code to solve an everyday problem.</p><div class="scene-footer"><span>🌱 Smart choices. Smoother streets.</span><span>✦</span></div></div>
+          </section>
+          <section class="panel activity-panel reveal">
+            <div class="activity-heading"><div><div class="heading-with-icon"><span class="activity-icon">◷</span><h2>Recent activity</h2></div><p>Latest updates from your parking lot.</p></div><span class="live-tag"><i></i> LIVE</span></div>
+            <div id="activity-list" class="activity-list"><div class="activity-empty"><span>🚗</span><p>Your parking activity will appear here.</p></div></div>
+            <button class="view-history" data-view="history">View parking history <span>→</span></button>
+          </section>
+          <section class="tip-card reveal"><span class="tip-spark">✦</span><div><b>NG SmartPark insight</b><p>Every free slot is one less minute spent searching. Small automation can make a big everyday difference.</p></div><span class="tip-emoji">💡</span></section>
+        </aside>
+      </section>
+      <section class="signature-strip reveal" aria-label="Project signature">
+        <div class="signature-brand"><img src="/ng-logo.svg" alt="NG SmartPark logo"><div><span class="signature-eyebrow">A STUDENT PROJECT WITH A BIG IDEA</span><h2>NG <span>SmartPark</span></h2><p>Designed & developed by <strong>Nithin Gowda</strong> · First-Year Computer Science Engineering</p></div></div>
+        <div class="signature-features">
+          <article><span class="feature-symbol symbol-cyan">⌁</span><b>Smart allocation</b><small>First free slot, automatically</small></article>
+          <article><span class="feature-symbol symbol-purple">◉</span><b>Live dashboard</b><small>Clear, quick parking status</small></article>
+          <article><span class="feature-symbol symbol-gold">₹</span><b>Fair fee logic</b><small>Simple, visible rate calculation</small></article>
+          <article><span class="feature-symbol symbol-green">▤</span><b>Saved history</b><small>Records stored with SQLite</small></article>
+        </div>
+      </section>
+      <footer class="page-footer"><span><img src="/ng-logo.svg" alt="" class="footer-mini-logo"> <strong>NG SmartPark</strong> <span class="footer-muted">· Smart Parking Management System</span></span><span>Python · HTML · CSS · JavaScript · SQLite</span><span>Park smarter. Shine brighter. <b>✦</b></span></footer>
+    </main>
+  </div>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden><section class="result-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Close dialog">×</button><div class="modal-symbol" id="modal-symbol">✓</div><p class="eyebrow" id="modal-eyebrow">PARKING UPDATE</p><h2 id="modal-title">All set!</h2><p id="modal-message"></p><div class="modal-details" id="modal-details"></div><button class="btn btn-green modal-done" id="modal-done">Looks good</button></section></div>
+</body>
+</html>
